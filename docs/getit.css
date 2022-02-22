@@ -1,4 +1,4 @@
-/*
+/* 
 Algumas informações úteis e dicas:
   - Fontes disponíveis:
     font-family: 'Roboto', sans-serif;
@@ -97,6 +97,12 @@ body {
   margin: 0.5rem;
 }
 
+.subtitle{
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-size: 100%;
+}
+
 .form-card{
   display: flex;
   flex-direction: column;
@@ -116,53 +122,111 @@ body {
   font-size: medium;
   width: 100%;
   margin-bottom: 0.5rem;
+  font-weight: bolder;
 }
 
 .autoresize{
+  font-family: "Roboto", sans-serif;
   border: 0;
-  font-size: medium;
+  font-size: 10px;
+  font-weight: 600;
   width: 100%;
-  margin-bottom: 0.25rem;
+  margin-top: 0.5rem;
   resize: none;
 }
 
-.btn{
+.btn {
+  font-family: "Roboto", sans-serif;
   width: 100%;
-  border: 0;
-  padding: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  position: relative;
+  display: block;
+  padding: 0.7rem;
+
+  overflow: hidden;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 0.2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+
   background-color: #f7d736;
-  box-shadow: 0px 2px 5px 0px rgba(50, 50, 50, 0.63);
-  border-radius: 0.2rem; 
+
+  transition: background-color 0.3s;
+}
+
+.btn > * {
+  position: relative;
+}
+
+.btn:before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  display: block;
+  width: 0;
+  padding-top: 0;
+
+  border-radius: 100%;
+
+  background-color: rgba(236, 240, 241, 0.3);
+
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+  width: 120%;
+  padding-top: 120%;
+
+  transition: width 0.2s ease-out, padding-top 0.2s ease-out;
 }
 
 .card-container{
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  margin-inline: 3rem;
 }
+
 .card{
-  display: flex;
   flex-direction: column;
-  margin: 1rem;
+  margin: auto;
+  margin-top: 1.5rem;
   box-shadow: 0px 4px 8px 0px rgba(50, 50, 50, 0.63);
   border-radius: 0.2rem;
-  padding: 0.4rem;
-  width: 17%;
-  background-color: aqua;
+  padding: 1rem;
+  height: 7rem;
+  width: 11rem;
 }
 
 .card-title{
   font-family: 'Permanent Marker', cursive;
   margin-bottom: 0.7rem;
+  font-weight: bold;
 }
 
 .card-content{
   font-family: 'Permanent Marker', cursive;
   color:#4c4c4c;
+  display: flex;
+  align-items: center;
+  padding: auto;
+  /* width: auto; */
+  /* margin: auto; */
 
+  height: 5rem;
+  justify-content: center;
 }
-
 .card-color-1{
   background-color: #ead3a7;
 }
