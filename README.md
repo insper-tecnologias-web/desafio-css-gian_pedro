@@ -4,7 +4,7 @@ DUPLA:
 
 - Giancarlo Vanoni Ruggiero
 - Pedro Andrade
-- Link do GitHub Pages: COLOQUE O LINK AQUI (POR EXEMPLO: https://insper-tecnologias-web.github.io/desafio-css/)
+- Link do GitHub Pages: https://gian2608.github.io/
 
 ## Desafio CSS
 
